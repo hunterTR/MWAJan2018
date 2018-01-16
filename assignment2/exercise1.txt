@@ -1,0 +1,22 @@
+1-
+setImmediate is placing function to timer queue immediately. 
+setTimeout is waiting for delay then adding it to timer queue.
+setImmediate(f) is similar to setTimeout(f,0); but setImmediate will be executed first because it will be somehow faster.
+
+2- 
+process.nextTick is adding funtion to tick queue which has the most priority than other queues.
+setImmediate adding functions to timer queue. 
+
+Since tick queue have the priority over timer queue. process.nextTick will be executed first.
+
+3-
+os
+path
+net
+http
+assert
+cluster
+dns
+inspector
+stream
+timers
