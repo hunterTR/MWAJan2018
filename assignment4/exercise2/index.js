@@ -5,7 +5,7 @@ const Rx = require('@reactivex/rxjs');
 function checkSystem(){
     console.log("Checking your system....");
     //console.log(os.totalmem());
-    return Rx.Observable.create(subscriber => {
+    Rx.Observable.create(subscriber => {
         //console.log(os.totalmem());
         if(os.totalmem() >= 4e+9)
         {
