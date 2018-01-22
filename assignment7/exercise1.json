@@ -1,0 +1,25 @@
+author
+{
+    name: string
+}
+
+book
+{
+    name: string,
+    isbn: string,
+    author: author
+}
+
+librarian
+{
+    students :  array of student
+}
+
+student
+{
+    name: string,
+    borrowedBooks: array of book
+}
+
+
+there will be book collection and student collection.
