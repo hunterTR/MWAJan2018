@@ -1,0 +1,30 @@
+author
+{
+    name: string
+}
+
+book
+{
+    name: string,
+    isbn: string,
+    author: author
+}
+
+librarian
+{
+    students :  array of student
+}
+
+student
+{
+    name: string,
+    borrowedBooks: array of book
+}
+
+
+there will be book collection and student collection.
+
+
+Since we will be checking books by name and isbn numbers. Book collection should have name and isbn indexes (seperately)
+
+Since librarian will check the books that student borrowed. Student collection should have name and borrowedBooks (together) indexes.
