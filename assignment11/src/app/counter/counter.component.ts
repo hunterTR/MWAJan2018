@@ -1,15 +1,15 @@
-import { Component, OnInit, Input,Output } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
-})
+  template: `<button (click)="increaseCounter()">+</button>
+                {{counter}}
+                <button (click)="decreaseCounter()">-</button>`
+  })
 export class CounterComponent implements OnInit {
 
   @Input() counter:number = 0;
-  @Output() onCounterChanged: EventEmitter;
+  @Output() onCounterChanged: EventEmitter<number>;
   constructor() {
     this.onCounterChanged = new EventEmitter();
    }
