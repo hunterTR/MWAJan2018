@@ -4,12 +4,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
+import { UpperDirective } from './upper.directive';
+import { MyvisibilityDirective } from './myvisibility.directive';
+import { MycolorDirective } from './mycolor.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent
+    CounterComponent,
+    UpperDirective,
+    MyvisibilityDirective,
+    MycolorDirective
   ],
   imports: [
     BrowserModule
