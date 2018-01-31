@@ -19,9 +19,11 @@ import { Component } from '@angular/core';
   <p [appMyvisibility] = "false" > hidden value </p>
 
 
-  <h3 appMycolor> CLICK ME I Am a color changing component <h3>
+  <h3 appMycolor> CLICK ME I Am a color changing component </h3>
 
-
+  <h2><a [routerLink]="['home']"> Angular Assignment 3 </a> </h2>
+  <!-- angular assignment  3 -->
+  <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.css']
 })
