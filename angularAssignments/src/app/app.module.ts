@@ -10,13 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DataService } from './data.service';
-import {ProfileGuard} from './profile.guard';
+import { ProfileGuard } from './profile.guard';
+import { ErrorComponent } from './error/error.component';
 
 const ROUTES : Route[] = [
     {path: '', redirectTo: 'home' , pathMatch:'full'},
     {path: 'home', component: HomeComponent},
     {path: 'students', component: StudentsComponent},
-    {path: 'profile/:id',component: ProfileComponent , canActivate:[ProfileGuard]}
+    {path: 'profile/:id',component: ProfileComponent , canActivate:[ProfileGuard]},
+    {path: 'error',component:ErrorComponent},
+    {path: '**' , redirectTo: 'home'}
 
 ];
 
@@ -29,12 +32,13 @@ const ROUTES : Route[] = [
     MycolorDirective,
     HomeComponent,
     StudentsComponent,
-    ProfileComponent
+    ProfileComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(ROUTES)
   ],
-  providers: [DataService],
+  providers: [DataService , ProfileGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
